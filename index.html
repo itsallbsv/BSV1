@@ -74,6 +74,39 @@ display: inline-block;
     }
     .button5 {border-radius: 12px;
     background-color: #0000ED}
+    
+    body {
+      width: 50%;
+      margin: 10vh auto;
+      /* System default fonts */
+      font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen-Sans,Ubuntu,Cantarell,"Helvetica Neue",sans-serif;
+    }
+    code {
+      color: deeppink;
+      /* Baseline shift */
+      position: relative;
+      top: -0.05em;
+    }
+    pre {
+      color: lightseagreen;
+    }
+    blockquote {
+      background-color: #eee;
+      padding: 1em;
+      border-radius: 1em;
+      margin: 1em 0;
+    }
+
+    /* The CSS you'll need in your website */
+    #unlockable {
+      visibility: hidden;
+      opacity: 0;
+      transition: opacity 5s;
+    }
+    #unlockable.unlocked {
+      visibility: visible;
+      opacity: 1;
+    }
 
     
      <!-- Required meta tags -->
@@ -86,14 +119,25 @@ display: inline-block;
     <title>Modal</title>
          
         </style>
-
+<script>
+    /* The Javascript you'll need in your website */
+    function handleSuccessfulPayment (payment) {
+      unlockContent();
+    }
+    function handleFailedPayment (error) {
+      alert("Sorry, the payment did not process correctly.")
+    }
+    function unlockContent () {
+      document.getElementById("unlockable").classList.toggle("unlocked");
+    }
+  </script>
        
     </head>
 
 <body>
     
-
-  <center><h2>Get a Bitcoin SV Wallet</h2>
+    
+    <center><h2>Get a Bitcoin SV Wallet</h2>
 
 <button type="button" class="button button5" data-toggle="modal" data-target="#exampleModal">
     Subscribe to Newsletter
@@ -204,8 +248,7 @@ display: inline-block;
         </div>
         <div class="modal-body">
           
-            <Center>
-                <iframe src="https://handcash.me/digitalcurrencydaily" height="500" width="300" title="Iframe Example"></iframe></Center>
+            <Center><iframe src="https://handcash.me/digitalcurrencydaily" height="500" width="300" title="Iframe Example"></iframe></Center>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
@@ -263,7 +306,9 @@ display: inline-block;
  <button class="button button4" 
                 >TonicPow</button></a></center>
     
-
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.min.js" integrity="sha384-w1Q4orYjBQndcko6MimVbzY0tgp4pWB4lZ7lr30WKz0vr/aWKhXdBNmNb5D92v7s" crossorigin="anonymous"></script>
        
         </div>
 
