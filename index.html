@@ -138,7 +138,16 @@ display: inline-block;
     
     
     <center><h2>Get a Bitcoin SV Wallet</h2>
-
+    <script src="https://one.relayx.io/relayone.js"></script>
+<div id="relayx-button"></div>
+<script>
+  const div = document.querySelector('#relayx-button')
+  relayone.render(div, {
+    to: "digitalcurrencydaily@relayx.io",
+    amount: "5.00",
+    currency: "USD"
+  })
+</script>
 <button type="button" class="button button5" data-toggle="modal" data-target="#exampleModal">
     Subscribe to Newsletter
   </button>
@@ -216,16 +225,7 @@ display: inline-block;
  <button class="button button4" 
                 >Web/Mobile - Money Button</button></a></center>
 
-    <script src="https://one.relayx.io/relayone.js"></script>
-<div id="relayx-button"></div>
-<script>
-  const div = document.querySelector('#relayx-button')
-  relayone.render(div, {
-    to: "digitalcurrencydaily@relayx.io",
-    amount: "5.00",
-    currency: "USD"
-  })
-</script>
+
    <center><h2>Swap Crypto To Bitcoin SV $BSV</h2>
 <iframe id="simpleswap-frame" name="SimpleSwap Widget" width="100%" height="425px" src="https://simpleswap.io/widget/1bd7372d-96fb-4d3f-ab56-b1a11e38dea9" frameborder="0"></iframe>
     </center>
