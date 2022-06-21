@@ -138,7 +138,7 @@ display: inline-block;
 <body>
     
 
-    <center><h2>Get A Bitcoin SV Wallet</h2>
+    <center><h2>Get C Bitcoin SV Wallet</h2>
         
 <script src="https://one.relayx.io/relayone.js"></script>
 <div id="relayx-button"></div>
@@ -154,10 +154,9 @@ display: inline-block;
 <script src="https://one.relayx.io/relayone.js"></script>
 <div id="relayx-button"></div>
 <script>
-  const div = document.querySelector('#relayx-button') 
-relayone.render(div, {
+  window.relayone.render("#relayx-button", {
     to: "digitalcurrencydaily@relayx.io",
-    amount: "0.7",
+    amount: "0.1",
     currency: "BSV",
     opReturn: ["0x6d02", "Showing ...."],
     onPayment: (e) => {
