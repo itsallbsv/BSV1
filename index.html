@@ -154,6 +154,26 @@ display: inline-block;
     })
 </script>
 
+
+<script src="https://one.relayx.io/relayone.js"></script>
+<div id="relayx-button"></div>
+<script>
+  const div = window.relayone.render('#relayx.button', {
+    to: "digitalcurrencydaily@relayx.io",
+    amount: "0.002",
+    currency: "BSV",
+    opReturn: ["0x6d02", "Showing ...."],
+    onPayment: (e) => {
+        //Show your unhide the div with your content or re-direct to the paid content 
+    },
+    onError: (err) => {
+        //some shit went wrong 
+        alert(err);
+        console.log(err);
+    },
+    })
+        </script>
+
         
      <div id="unlockable">
    <a href='https://electrumsv.io/'>
