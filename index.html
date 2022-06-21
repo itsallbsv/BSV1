@@ -138,7 +138,7 @@ display: inline-block;
 <body>
     
 
-    <center><h2>Get A Bitcoin SV Wallet!</h2>
+    <center><h2>Get A Bitcoin SV Wallet.</h2>
         
 <script src="https://one.relayx.io/relayone.js"></script>
 <div id="relayx-button"></div>
@@ -149,14 +149,8 @@ display: inline-block;
     amount: "0.7",
     currency: "BSV",
     opReturn: ["0x6d02", "Showing ...."],
-    onPayment: (e) => {
-        //Show your unhide the div with your content or re-direct to the paid content 
-    },
-    onError: (err) => {
-        //some shit went wrong 
-        alert(err);
-        console.log(err);
-    },
+    onPayment: "onPayment",
+    onError: "onError",
     };
 </script>
 
