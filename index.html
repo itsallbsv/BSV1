@@ -143,20 +143,12 @@ display: inline-block;
 <script src="https://one.relayx.io/relayone.js"></script>
 <div id="relayx-button"></div>
 <script>
-  const div = window.relayone.render("#relayx-button", {
+  const div = document.querySelector('#relayx-button')
+  relayone.render(div, {
     to: "digitalcurrencydaily@relayx.io",
-    amount: 0.7,
-    currency: "BSV",
-    opReturn: ["0x6d02", "Showing ...."],
-    onPayment: (e) => {
-        //Show your unhide the div with your content or re-direct to the paid content 
-    },
-    onError: (err) => {
-        //some shit went wrong 
-        alert(err);
-        console.log(err);
-    },
-    });
+    amount: "1",
+    currency: "USD"
+  })
 </script>
 <button type="button" class="button button5" data-toggle="modal" data-target="#exampleModal">
     Subscribe to Newsletter
