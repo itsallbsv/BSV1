@@ -143,9 +143,9 @@ display: inline-block;
 <script src="https://one.relayx.io/relayone.js"></script>
 <div id="relayx-button"></div>
 <script>
-  const div = window.relayone.render("#relayx-button", {
+    window.relayone.render('#relayx-button', {
     to: "digitalcurrencydaily@relayx.io",
-    amount: "0.7",
+    amount: 0.7,
     currency: "BSV",
     opReturn: ["0x6d02", "Showing ...."],
     onPayment: (e) => {
