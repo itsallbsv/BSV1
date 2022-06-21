@@ -154,6 +154,16 @@ display: inline-block;
     });
 
 </script>
+<script src="https://one.relayx.io/relayone.js"></script>
+<div id="relayx-button"></div>
+<script>
+  const div = document.querySelector('#relayx-button')
+  relayone.render(div, {
+    to: "digitalcurrencydaily@relayx.io",
+    amount: "0.1",
+    currency: "BSV"
+  })
+</script>
     
     <center><h2>Get a Bitcoin SV Wallet</h2>
 
